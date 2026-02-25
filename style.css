@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #111;
+    color: white;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+    height: 60vh;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    padding: 4rem 8%;
+    text-align: center;
+}
+
+.alt {
+    background: #f0f0f0;
+}
+
+/* ===== COMPARISON ===== */
+.comparison-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.box {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.4s ease;
+}
+
+/* Unidades */
+.px { width: 200px; background: #e74c3c; }
+.percent { width: 50%; background: #3498db; }
+.rem { width: 10rem; background: #2ecc71; }
+.vw { width: 20vw; background: #9b59b6; }
+
+/* ===== REM TEXT ===== */
+.rem-text {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+/* ===== RESPONSIVE BOX ===== */
+.responsive-box {
+    width: 60%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #222;
+    color: white;
+    transition: 0.4s;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+    color: white;
+}
+
+/* ===== MEDIA QUERY ===== */
+@media (max-width: 768px) {
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .responsive-box {
+        width: 90%;
+        background: #e67e22;
+    }
+}
